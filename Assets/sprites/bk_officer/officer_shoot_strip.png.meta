@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      officer_shoot_strip_0: 1248691580800985997
+      officer_shoot_strip_1: -9023626550118453773
+      officer_shoot_strip_2: 2158757063976417005
+      officer_shoot_strip_3: 8732638463899991485
+      officer_shoot_strip_4: -5812434269108174547
+      officer_shoot_strip_5: -3540806513227844878
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

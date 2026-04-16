@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd322bcd8c6bd241bb1f7ba6aa85741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAwarenessDistance: 6
+  _playerAwarenessDistance: 4
 --- !u!114 &5137010983017096612
 MonoBehaviour:
   m_ObjectHideFlags: 0

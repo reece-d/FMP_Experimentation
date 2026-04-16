@@ -1,39 +1,68 @@
+using UnityEngine;
 
-   using UnityEngine;
-
-public class PlayerMovement: MonoBehaviour
+/// <summary>
+/// Handles top-down 2D player movement and rotation.
+/// Works with Rigidbody2D for smooth physics-based motion.
+/// </summary>
+[RequireComponent(typeof(Rigidbody2D))]
+public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Movement speed of the player
+    [Header("Movement Settings")]
+    [SerializeField] private float moveSpeed = 5f; // Units per second
+
+    [Header("Rotation Settings")]
+    [SerializeField] private bool rotateTowardsMouse = true; // If false, rotates towards movement direction
 
     private Rigidbody2D rb;
-    private Vector2 movement;
+    private Vector2 movementInput;
 
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        if (rb == null)
+    }
+
+    private void Update()
+    {
+        // --- INPUT HANDLING ---
+        // Old Input System (works without setup)
+        movementInput.x = Input.GetAxisRaw("Horizontal");
+        movementInput.y = Input.GetAxisRaw("Vertical");
+        movementInput = movementInput.normalized; // Prevent faster diagonal movement
+
+        // --- ROTATION ---
+        if (rotateTowardsMouse)
         {
-            Debug.LogError("Rigidbody2D component is missing from this GameObject.");
+            RotateTowardsMouse();
+        }
+        else if (movementInput.sqrMagnitude > 0.01f)
+        {
+            RotateTowardsMovement();
         }
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        // Get input from keyboard or controller
-        movement.x = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
-        movement.y = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
+        // --- MOVEMENT ---
+        rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
     }
 
-    void FixedUpdate()
+    /// <summary>
+    /// Rotates the player to face the mouse cursor.
+    /// </summary>
+    private void RotateTowardsMouse()
     {
-        // Move the player
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mouseWorldPos - transform.position);
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f; // Offset for sprite facing up
+        rb.rotation = angle;
+    }
 
-        // Rotate player only if moving
-        if (movement != Vector2.zero)
-        {
-            float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg; // Convert direction vector to angle
-            rb.rotation = angle; // Rotate the Rigidbody2D
-        }
+    /// <summary>
+    /// Rotates the player to face the movement direction.
+    /// </summary>
+    private void RotateTowardsMovement()
+    {
+        float angle = Mathf.Atan2(movementInput.y, movementInput.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
 }
