@@ -102,7 +102,8 @@ GameObject:
   - component: {fileID: -3303449935663249438}
   - component: {fileID: -8626199397188908214}
   - component: {fileID: 1958679938073829987}
-  - component: {fileID: 4830949771456981676}
+  - component: {fileID: 4943649553299653961}
+  - component: {fileID: 82748880512567639}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -243,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _killScore: 10
---- !u!114 &4830949771456981676
+--- !u!114 &4943649553299653961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,7 +253,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5778830473589161562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f4feb87f1abf5b4ba476741bc53bfbb, type: 3}
+  m_Script: {fileID: 11500000, guid: fccfe994aee837e46acb431e968765ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 10
@@ -260,10 +261,10 @@ MonoBehaviour:
   OnDied:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5137010983017096612}
-        m_TargetAssemblyTypeName: EnemyMovement, Assembly-CSharp
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 4943649553299653961}
+        m_TargetAssemblyTypeName: EnemyHealthController, Assembly-CSharp
+        m_MethodName: DestroyEnemy
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -274,7 +275,34 @@ MonoBehaviour:
         m_CallState: 2
   OnDamaged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 82748880512567639}
+        m_TargetAssemblyTypeName: EnemyVisuals, Assembly-CSharp
+        m_MethodName: FlashOnDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &82748880512567639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778830473589161562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cde20864899b0c4292df26955356a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyRenderer: {fileID: 6404459453874000166}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.5
