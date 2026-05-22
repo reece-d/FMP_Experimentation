@@ -13,11 +13,11 @@ public class Collectable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var player = collision.GetComponent<PlayerMovement>();
+        var Player = collision.GetComponent<PlayerMovement>();
 
-        if (player != null)
+        if (Player != null)
         {
-            _collectableBehaviour.OnCollected(player.gameObject);
+            _collectableBehaviour.OnCollected(Player.gameObject);
             Destroy(gameObject);
         }
     }
