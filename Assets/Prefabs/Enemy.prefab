@@ -103,6 +103,8 @@ GameObject:
   - component: {fileID: 82748880512567639}
   - component: {fileID: 598464470395403333}
   - component: {fileID: -8864046631281162651}
+  - component: {fileID: 3925742802701956813}
+  - component: {fileID: 3669532045476858079}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -354,3 +356,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chanceOfCollectableDrop: 0.3
+--- !u!114 &3925742802701956813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778830473589161562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d19318b08920d44ba882453fd7dc789, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: f4a3b532f4b400447ad7719e48fe91d2, type: 3}
+  deathSoundVolume: 0.5
+  health: 100
+--- !u!95 &3669532045476858079
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5778830473589161562}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e00b5a2bea163d34db3c675b140f0530, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

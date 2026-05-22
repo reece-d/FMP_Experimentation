@@ -16,9 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movementInput;
 
+    private Animator _animator;
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -44,11 +48,22 @@ public class PlayerMovement : MonoBehaviour
     {
         // --- MOVEMENT ---
         rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+        SetAnimation();
+    }
+
+    private void SetAnimation()
+    {
+        bool isMoving = movementInput != Vector2.zero;
+
+        _animator.SetBool("isMoving", isMoving);
     }
 
     /// <summary>
     /// Rotates the player to face the mouse cursor.
     /// </summary>
+    /// 
+
+   
     private void RotateTowardsMouse()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -85,7 +85,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -98,7 +98,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -111,7 +111,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -124,7 +124,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -144,14 +144,13 @@ TextureImporter:
       name: officer_shoot_strip_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 3
-        width: 33
-        height: 40
+        x: 0
+        y: 0
+        width: 38
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -166,20 +165,19 @@ TextureImporter:
       name: officer_shoot_strip_1
       rect:
         serializedVersion: 2
-        x: 44
-        y: 3
-        width: 33
-        height: 40
+        x: 38
+        y: 0
+        width: 38
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3fde76e3673a5c280800000000000000
-      internalID: -9023626550118453773
+      spriteID: fae05500aa514ed4e9d3b347eb8d872c
+      internalID: 1255681041
       vertices: []
       indices: 
       edges: []
@@ -188,20 +186,19 @@ TextureImporter:
       name: officer_shoot_strip_2
       rect:
         serializedVersion: 2
-        x: 75
+        x: 76
         y: 0
-        width: 40
-        height: 43
+        width: 38
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: de6fda2bc1275fd10800000000000000
-      internalID: 2158757063976417005
+      spriteID: 9d787decf1429ac4f92c0b8b46d33581
+      internalID: 1544549133
       vertices: []
       indices: 
       edges: []
@@ -210,20 +207,19 @@ TextureImporter:
       name: officer_shoot_strip_3
       rect:
         serializedVersion: 2
-        x: 92
-        y: 38
-        width: 6
-        height: 6
+        x: 114
+        y: 0
+        width: 38
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dbdfba85a60903970800000000000000
-      internalID: 8732638463899991485
+      spriteID: 14c1fe91ba1208246a1fb0357ca38768
+      internalID: 2126204463
       vertices: []
       indices: 
       edges: []
@@ -232,20 +228,19 @@ TextureImporter:
       name: officer_shoot_strip_4
       rect:
         serializedVersion: 2
-        x: 120
-        y: 3
-        width: 33
-        height: 40
+        x: 152
+        y: 0
+        width: 38
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d21008de3d5165fa0800000000000000
-      internalID: -5812434269108174547
+      spriteID: 5bc34fc0bfcebd342ab322b9169ec794
+      internalID: -1862031231
       vertices: []
       indices: 
       edges: []
@@ -254,44 +249,40 @@ TextureImporter:
       name: officer_shoot_strip_5
       rect:
         serializedVersion: 2
-        x: 158
-        y: 1
-        width: 70
-        height: 44
+        x: 190
+        y: 0
+        width: 38
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2f23aa87c378cdec0800000000000000
-      internalID: -3540806513227844878
+      spriteID: 2f1047edcdbdfef4487c109ac27953fc
+      internalID: 1712513918
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d7fa51d5b96ed744bb2180e1390b51d7
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
       officer_shoot_strip_0: 1248691580800985997
-      officer_shoot_strip_1: -9023626550118453773
-      officer_shoot_strip_2: 2158757063976417005
-      officer_shoot_strip_3: 8732638463899991485
-      officer_shoot_strip_4: -5812434269108174547
-      officer_shoot_strip_5: -3540806513227844878
+      officer_shoot_strip_1: 1255681041
+      officer_shoot_strip_2: 1544549133
+      officer_shoot_strip_3: 2126204463
+      officer_shoot_strip_4: -1862031231
+      officer_shoot_strip_5: 1712513918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
